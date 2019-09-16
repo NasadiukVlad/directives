@@ -9,39 +9,16 @@ export class AttributeDirectivesComponent {
 
   public inputValue = '';
   public secondInputValue = '';
-
-  public secondInputStyles = {};
-
   public colorPickerCurrentValue = 'yellow';
+  public is;
 
-  public onSecondInputValueChange() {
-    this.setSecondInputStyles();
-  }
-
-  public isTextValid() {
+  public isTextValid(): boolean {
     return this.inputValue.length < 10;
   }
 
-  private setSecondInputStyles() {
-    if (this.secondInputValue.length <= 5) {
-      this.secondInputStyles = {
-        'font-weight': 'normal',
-        'color': 'black'
-      };
-    } else if (this.secondInputValue.length > 5 && this.secondInputValue.length <= 10) {
-      this.secondInputStyles = {
-        'font-weight': 'bold',
-        'color': 'blue',
-        'font-size': '16px'
-      };
-    } else {
-      this.secondInputStyles = {
-        'color': 'red',
-        'font-size': '24px'
-      };
-    }
+  public anotherValidationCheck(): boolean {
+    return this.secondInputValue.length > 5;
   }
-
 }
 
 

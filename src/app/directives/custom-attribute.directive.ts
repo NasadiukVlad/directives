@@ -2,9 +2,10 @@ import {Directive, HostBinding, HostListener, Input} from '@angular/core';
 
 @Directive({
   // selector: '.appCustomAttribute' - css class
-  // selector: '#appCustomAttribute' - css id
-  // selector: 'appCustomAttribute' - component selector
-  selector: '[appCustomAttribute]'
+  // selector: 'input' - for all inputs
+  // selector: '[type="text"]' for all elements which has type="text" attribute
+  // selector: 'input:not([type="text"])' for all input elements which dont have type="text" attribute
+   selector: '[appCustomAttribute]'
 })
 export class CustomAttributeDirective {
 

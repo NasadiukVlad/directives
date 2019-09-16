@@ -5,8 +5,8 @@
 <input [(ngModel)]="inputValue">
 
 <hr>
-<h4 [ngStyle]="secondInputStyles">Ng Style Attribute</h4>
-<input (input)="onSecondInputValueChange()" [(ngModel)]="secondInputValue">
+<h4 [ngStyle]="{'color': anotherValidationCheck() ? 'green' : 'black'}">Ng Style Attribute</h4>
+<input [(ngModel)]="secondInputValue">
 
 
 <hr>
